@@ -31,7 +31,7 @@ A WordPress plugin designed to manage and display real estate listings with a hi
   - Single property page (`single-property.php`) for detailed listing views.
   - Archive page (`archive-property.php`) for listing archives and taxonomy filters.
 - **Admin Meta Boxes**: Manage property details (price, location, square feet) via the WordPress admin.
-- **WP-CLI Command**: `wp rel_generate` to create 1000 dummy listings with fake data (requires FakerPHP).
+- **WP-CLI Command**: ` wp rel_generate generate_dummy_data --path=/var/www/html` to create 1000 dummy listings with fake data (requires FakerPHP).
 - **Responsive Styling**: Uses TailwindCSS for a clean, mobile-friendly frontend.
 - **Performance**: Optimized WP_Query, minimal CSS, and efficient database interactions.
 
@@ -40,7 +40,7 @@ A WordPress plugin designed to manage and display real estate listings with a hi
 - **PHP**: Version 7.4 or higher.
 - **Node.js and npm**: For compiling TailwindCSS (Node.js v20.13.1+, npm v10.5.2+ recommended).
 - **Composer**: For installing FakerPHP for WP-CLI dummy data generation.
-- **WP-CLI**: For running the `wp rel_generate` command (optional but required for dummy data).
+- **WP-CLI**: For running the ` wp rel_generate generate_dummy_data --path=/var/www/html ` command (optional but required for dummy data).
 - **Server Access**: SSH or terminal access to install dependencies and run WP-CLI (may require hosting provider support in restricted environments like `jailshell`).
 - **Write Permissions**: For `wp-content/uploads` (image uploads) and plugin directory (template/CSS files).
 
@@ -48,7 +48,7 @@ A WordPress plugin designed to manage and display real estate listings with a hi
 1. **Download the Plugin**:
    - Clone the repository or download the ZIP file:
      ```bash
-     git clone https://github.com/your-repo/real-estate-listings.git
+     git clone https://github.com/arslan-arshad-ropstam/real-estate-plugin-task.git
      ```
    - Or upload the `real-estate-listings` folder to `/wp-content/plugins/`.
 
@@ -90,11 +90,7 @@ A WordPress plugin designed to manage and display real estate listings with a hi
      - `single-property.php`
      - `archive-property.php`
      - `property-card.php`
-   - Check permissions:
-     ```bash
-     chmod -R 755 /path/to/wp-content/plugins/real-estate-listings/templates
-     chown -R www-data:www-data /path/to/wp-content/plugins/real-estate-listings/templates
-     ```
+
 
 3. **Compile TailwindCSS**:
    - If not already done, compile the CSS:
@@ -107,7 +103,7 @@ A WordPress plugin designed to manage and display real estate listings with a hi
      ```
 
 4. **Add Placeholder Image** (Optional):
-   - To avoid issues with external services like `via.placeholder.com`, add a local placeholder image:
+   - To avoid issues with external services like `picsum.photos`, add a local placeholder image:
      - Place an 800x600 image (e.g., `placeholder.jpg`) in `real-estate-listings/assets/images/`.
      - Ensure `class-wp-cli.php` uses the local image (see WP-CLI section).
 
