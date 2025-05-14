@@ -2,24 +2,6 @@
 
 A WordPress plugin designed to manage and display real estate listings with a high-performance, responsive frontend and a robust admin interface. The plugin provides a custom post type for properties, taxonomies for filtering, a shortcode for dynamic displays, custom templates for single and archive pages, and a WP-CLI command to generate dummy data for testing.
 
-## Table of Contents
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Setup](#setup)
-- [Using the Plugin](#using-the-plugin)
-  - [Shortcode](#shortcode)
-  - [Single Property Page](#single-property-page)
-  - [Archive Page](#archive-page)
-  - [Admin Interface](#admin-interface)
-- [WP-CLI Command](#wp-cli-command)
-  - [Prerequisites for WP-CLI](#prerequisites-for-wp-cli)
-  - [Running the WP-CLI Command](#running-the-wp-cli-command)
-- [Performance Considerations](#performance-considerations)
-- [Troubleshooting](#troubleshooting)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - **Custom Post Type**: `property` for real estate listings with support for title, description, featured image, price, location, city, square feet, and listing status.
@@ -56,31 +38,6 @@ A WordPress plugin designed to manage and display real estate listings with a hi
    - In the WordPress admin, go to **Plugins > Installed Plugins**.
    - Activate **Real Estate Listings**.
 
-3. **Install Dependencies**:
-   - **TailwindCSS**:
-     - Navigate to the plugin directory:
-       ```bash
-       cd /path/to/wp-content/plugins/real-estate-listings
-       ```
-     - Install Node.js dependencies:
-       ```bash
-       npm install
-       ```
-     - Compile TailwindCSS:
-       ```bash
-       npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css --minify
-       ```
-   - **FakerPHP** (for WP-CLI):
-     - Install Composer if not already installed:
-       ```bash
-       curl -sS https://getcomposer.org/installer | php
-       sudo mv composer.phar /usr/local/bin/composer
-       ```
-     - Install FakerPHP:
-       ```bash
-       composer require fakerphp/faker
-       ```
-
 ## Setup
 1. **Configure Permalinks**:
    - Go to **Settings > Permalinks** in the WordPress admin and click “Save Changes” to register the `property` post type and taxonomies.
@@ -91,18 +48,7 @@ A WordPress plugin designed to manage and display real estate listings with a hi
      - `archive-property.php`
      - `property-card.php`
 
-
-3. **Compile TailwindCSS**:
-   - If not already done, compile the CSS:
-     ```bash
-     npm run build
-     ```
-   - Or use the watch mode for development:
-     ```bash
-     npm run watch
-     ```
-
-4. **Add Placeholder Image** (Optional):
+3. **Add Placeholder Image** (Optional):
    - To avoid issues with external services like `picsum.photos`, add a local placeholder image:
      - Place an 800x600 image (e.g., `placeholder.jpg`) in `real-estate-listings/assets/images/`.
      - Ensure `class-wp-cli.php` uses the local image (see WP-CLI section).
@@ -115,3 +61,15 @@ Display property listings on any page or post using the `[property_listings]` sh
 - **Basic Usage**:
   ```shortcode
   [property_listings]
+
+  ## Video Tutorials
+
+To help you get started, we’ve created two video tutorials:
+
+- **Plugin Front Flow Overview**: Demonstrates the user experience, including the `[property_listings]` shortcode, single property pages, archive pages, and taxonomy filters.
+  - Watch: [[YouTube-Front-Flow-URL](https://youtu.be/EzzsUhQ1GT8)]
+
+- **Code Overview**: Walks through the plugin’s codebase, covering the custom post type, taxonomies, WP-CLI script, TailwindCSS integration, and template structure.
+  - Watch: [[YouTube-Code-Overview-URL](https://youtu.be/COL5SWc1Jf8)]
+
+*Replace `[https://youtu.be/EzzsUhQ1GT8]` and `[https://youtu.be/COL5SWc1Jf8]` with actual YouTube video links.*
