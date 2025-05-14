@@ -1,0 +1,17 @@
+{
+  "name": "real-estate-listings",
+  "version": "1.0.0",
+  "description": "A WordPress plugin to manage and display real estate listings with a responsive frontend and admin interface.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css --minify",
+    "watch": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.min.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

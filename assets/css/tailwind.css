@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.property-card {
+    transition: transform 0.2s;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+.prose {
+    color: #374151;
+}
+
+.prose h2 {
+    @apply text-2xl font-semibold mt-6 mb-4;
+}
+
+.prose p {
+    @apply mb-4;
+}
